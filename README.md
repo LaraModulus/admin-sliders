@@ -1,7 +1,7 @@
 LaraMod Admin Sliders 0.* Alpha
 ----------------------------
 LaraMod is a modular Laravel based CMS.
-https://github.com/LaraModulus
+https://github.com/LaraModulus 
 
 **WARNING: Until v1 there will be no backward compatibility and some versions may require migrate:refresh** 
 
