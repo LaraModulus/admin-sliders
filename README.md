@@ -8,14 +8,14 @@ https://github.com/LaraModulus
 Installation
 ---------------
 ```
-composer require laramod\admin-sliders
+composer require laramod/admin-sliders
 ```
  **config/app.php**
  
 ```php 
 'providers' => [
     ...
-    LaraMod\AdminSliders\AdminSlidersServiceProvider::class,
+    LaraMod\Admin\Sliders\AdminSlidersServiceProvider::class,
 ]
 ```
 **Publish migrations**
