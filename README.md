@@ -15,7 +15,7 @@ composer require laramod/admin-sliders
 ```php 
 'providers' => [
     ...
-    LaraMod\AdminSliders\AdminSlidersServiceProvider::class,
+    LaraMod\Admin\Sliders\AdminSlidersServiceProvider::class,
 ]
 ```
 **Publish migrations**
