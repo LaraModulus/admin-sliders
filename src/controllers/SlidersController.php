@@ -34,7 +34,7 @@ class SlidersController extends Controller
     public function postForm(Request $request)
     {
 
-        $item = Sliders::firstOrCreate(['id' => $request->get('id')]);
+        $item = Sliders::firstOrNew(['id' => $request->get('id')]);
         try {
             $item->autoFill($request);
         } catch (\Exception $e) {
@@ -90,9 +90,6 @@ class SlidersController extends Controller
             ->editColumn('to_date', function ($item) {
                 if(is_null($item->to_date)) return null;
                 return $item->to_date->format('d.m.Y H:i');
-            })
-            ->addColumn('title', function($item){
-                return $item->{'title_'.config('app.fallback_locale', 'en')};
             })
             ->addColumn('status', function ($item) {
                 return !$item->viewable && ($item->from_date > \Carbon\Carbon::now() || $item->to_date < \Carbon\Carbon::now()) ? '<i class="fa fa-eye-slash"></i>' : '<i class="fa fa-eye"></i>';

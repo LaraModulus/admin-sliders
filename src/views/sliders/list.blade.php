@@ -51,7 +51,7 @@
                 ],
                 columns: [
                     {data: 'id', name: 'ID'},
-                    {data: 'title_en', name: 'title_en'},
+                    {data: 'title_{{config('app.fallback_locale')}}', name: 'title_{{config('app.fallback_locale')}}'},
                     {data: 'status', searchable: false, orderable: false},
                     {data: 'from_date', searchable: true},
                     {data: 'to_date', searchable: true},
